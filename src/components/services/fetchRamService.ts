@@ -1,21 +1,25 @@
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 
-async function fetchData(url: string, headers: Record<string, string> = {}): Promise<any[]> {
+export async function fetchCharacters() {
   try {
-    const response: AxiosResponse<any> = await axios.get(url, { headers });
-    return response.data || [];
+    const response = await axios.get<any>(
+      "https://rickandmortyapi.com/api/character"
+    );
+    return response.data?.results || [];
   } catch (error) {
     console.error("Erro ao buscar os dados:", error);
     throw new Error("Erro ao buscar os dados");
   }
 }
 
-export async function fetchCharacters(): Promise<any[]> {
-  const url: string = "https://rickandmortyapi.com/api/character";
-  return await fetchData(url);
-}
-
-export async function fetchEpisodes(): Promise<any[]> {
-  const url: string = "https://rickandmortyapi.com/api/episode";
-  return await fetchData(url);
+export async function fetchEpisodes() {
+  try {
+    const response = await axios.get<any>(
+      "https://rickandmortyapi.com/api/episode",
+    );
+    return response.data?.results || [];
+  } catch (error) {
+    console.error("Erro ao buscar estatísticas mundiais:", error);
+    throw new Error("Erro ao buscar estatísticas mundiais");
+  }
 }

@@ -1,4 +1,4 @@
-import { Box, Grid, ImageList, ImageListItem, ImageListItemBar, useMediaQuery } from '@mui/material';
+import { Box, Grid, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import fotoDeMorty from '../../assets/foto de morty.jpg';
 import fotoDeRick from '../../assets/foto de rick.jpg';
@@ -20,22 +20,20 @@ const StyledImageListItem = styled(ImageListItem)(({ theme }) => ({
 }));
 
 const Home = () => {
-  const isMobileSmall = useMediaQuery('(max-width:600px)');
-  const rowHeight = isMobileSmall ? 400 : 700;
   
   return (
-    <Box maxWidth="1100px" margin="auto" bgcolor="#E1B15C" minWidth="dvh">
+    <Box maxWidth="1000px" margin="auto" bgcolor="#E1B15C" minWidth="dvh">
       <Grid container spacing={0} minHeight="100%">
-        <Grid item xs={12} xl={6}>
-          <ImageList cols={1} rowHeight={rowHeight}>
+        <Grid item xs={12} sm={6}>
+          <ImageList cols={1} rowHeight={555}>
             <StyledImageListItem>
               <img src={fotoDeMorty} alt="Morty" />
               <ImageListItemBar title="Morty" />
             </StyledImageListItem>
           </ImageList>
         </Grid>
-        <Grid item xs={12} xl={6}>
-          <ImageList cols={1} rowHeight={rowHeight}>
+        <Grid item xs={12} sm={6}>
+          <ImageList cols={1} rowHeight={555}>
             <StyledImageListItem>
               <img src={fotoDeRick} alt="Rick" />
               <ImageListItemBar title="Rick" />
@@ -47,6 +45,5 @@ const Home = () => {
   );
 };
 
-// sou lindo 
 
 export default Home;

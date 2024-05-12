@@ -1,12 +1,12 @@
 import { Box, Typography } from '@mui/material';
-import bannerImage from '../../assets/bannertam2.jpg';
+import bannerImage from '../../assets/banner-ramedited.jpg';
 
 const Header = () => {
   return (
     <Box
       sx={{
         position: 'relative',
-        height: '450px',
+        height: '300px',
         backgroundImage: `url(${bannerImage})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
