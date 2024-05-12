@@ -1,9 +1,9 @@
-import { Box, Grid, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import fotoDeMorty from '../../assets/foto de morty.jpg';
-import fotoDeRick from '../../assets/foto de rick.jpg';
+import { Box, Grid, ImageList, ImageListItem } from '@mui/material';
+import { styled } from '@mui/system'; 
+import fotoDeMorty from '../../assets/rick22.png';
+import fotoDeRick from '../../assets/morty22.jpg';
 
-const StyledImageListItem = styled(ImageListItem)(({ theme }) => ({
+const StyledImageListItem = styled(ImageListItem)({
   borderRadius: '5px',
   overflow: 'hidden',
   transition: 'opacity 0.3s ease-in-out',
@@ -12,12 +12,12 @@ const StyledImageListItem = styled(ImageListItem)(({ theme }) => ({
   },
   border: "1px solid white",
   '& img': {
-    objectFit: 'cover',
+    objectFit: 'contain', // Alteração para 'contain'
     width: '100%',
     height: '100%',
     maxWidth: '100%',
   },
-}));
+});
 
 const Home = () => {
   
@@ -28,7 +28,6 @@ const Home = () => {
           <ImageList cols={1} rowHeight={555}>
             <StyledImageListItem>
               <img src={fotoDeMorty} alt="Morty" />
-              <ImageListItemBar title="Morty" />
             </StyledImageListItem>
           </ImageList>
         </Grid>
@@ -36,7 +35,6 @@ const Home = () => {
           <ImageList cols={1} rowHeight={555}>
             <StyledImageListItem>
               <img src={fotoDeRick} alt="Rick" />
-              <ImageListItemBar title="Rick" />
             </StyledImageListItem>
           </ImageList>
         </Grid>

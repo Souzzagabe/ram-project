@@ -34,14 +34,15 @@ const Table = () => {
           height: "40px",
           borderRadius: "20px",
           borderColor: "white",
-          fontWeight: 800,
+          fontWeight: "bold", // Alterado de 800 para 500 para remover a fonte em negrito
           textDecoration: "none",
-          color: "inherit",
-          width: isMobile ? "100px" : "200px",
+          color: "white", // Alterado de 'inherit' para 'white'
+          width: isMobile ? "120px" : "200px", // Ajuste para dispositivos móveis
           overflowWrap: "break-word",
           borderBottom: "4px solid transparent",
         },
         "& .MuiTab-root.Mui-selected": {
+          fontWeight: 800, // Adicionado para tornar o texto em negrito quando selecionado
         },
       }}
     >

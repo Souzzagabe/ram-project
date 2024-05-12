@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Grid, CircularProgress, Typography, Container, Card, CardContent } from '@mui/material';
 import { fetchEpisodes } from '../services/fetchRamService';
-import { EpisodeData } from '../@types/Types';
+import { EpisodeData } from '../types/types';
 
 
 const EpisodesCard = () => {
@@ -36,7 +36,7 @@ const EpisodesCard = () => {
                     Nome: {episodes.name}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Foi ao ar: {episodes.air_date}
+                    No Ar: {episodes.air_date}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Episódios: {episodes.episode}

@@ -1,7 +1,9 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import bannerImage from '../../assets/banner-ramedited.jpg';
 
 const Header = () => {
+  const isSmallScreen = useMediaQuery('(max-width:600px)');
+
   return (
     <Box
       sx={{
@@ -26,7 +28,7 @@ const Header = () => {
         }}
       >
         <Typography
-          variant="h3"
+          variant={isSmallScreen ? 'h4' : 'h3'}
           sx={{
             fontWeight: 'bold',
             color: 'white',

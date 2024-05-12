@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Grid, CircularProgress, Typography, Container, Card, CardContent, CardMedia } from '@mui/material';
 import { fetchCharacters } from '../services/fetchRamService';
-import { CharacterData } from '../@types/Types';
+import { CharacterData } from '../types/types';
 
 const CharacterCard = () => {
   const [characters, setCharacters] = useState<CharacterData[]>([]);
