@@ -12,14 +12,21 @@ export async function fetchCharacters() {
   }
 }
 
-export async function fetchEpisodes() {
+export const fetchEpisodes = async () => {
   try {
-    const response = await axios.get<any>(
-      "https://rickandmortyapi.com/api/episode",
-    );
-    return response.data?.results || [];
+    const allEpisodes = [];
+    let nextPage = "https://rickandmortyapi.com/api/episode";
+
+    while (nextPage) {
+      const response = await fetch(nextPage);
+      const data = await response.json();
+      allEpisodes.push(...data.results);
+      nextPage = data.info.next;
+    }
+
+    return allEpisodes;
   } catch (error) {
-    console.error("Erro ao buscar estatísticas mundiais:", error);
-    throw new Error("Erro ao buscar estatísticas mundiais");
+    console.error('Erro ao buscar os dados dos episódios:', error);
+    throw error;
   }
-}
+};

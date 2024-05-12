@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import CharacterCard from "./components/cards/CharacterCard";
 import EpisodesCard from "./components/cards/EpisodesCards";
 
+
 function App() {
   
   return (
@@ -15,7 +16,7 @@ function App() {
       <Table/>
       <Box bgcolor="#E1B15C" px={2} py={1}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/personagens" element={<CharacterCard />} />
           <Route path="/episodios" element={<EpisodesCard />} />
         </Routes>

@@ -53,7 +53,7 @@ const Table = () => {
         textColor="primary"
       >
         <Link
-          to="/"
+          to="/home"
           style={{ textDecoration: "none", color: "inherit" }}
           onClick={() => setActiveTab(0)}
         >
