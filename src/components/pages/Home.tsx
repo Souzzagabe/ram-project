@@ -1,7 +1,8 @@
 import { Box, Grid, ImageList, ImageListItem } from '@mui/material';
-import { styled } from '@mui/system'; 
-import fotoDeMorty from '../../assets/rick22.png';
-import fotoDeRick from '../../assets/morty22.jpg';
+import { styled } from '@mui/system';
+import fotoDeMorty from '@/assets/rick22.png';
+import fotoDeRick from '@/assets/morty22.jpg';
+
 
 const StyledImageListItem = styled(ImageListItem)({
   borderRadius: '5px',
