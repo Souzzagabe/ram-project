@@ -46,11 +46,12 @@ const EpisodesCard = () => {
     }
   };
 
-  const handlePageChange = (e: React.ChangeEvent<unknown>, pageNumber: number) => {
+  const handlePageChange = (_: React.ChangeEvent<unknown>, pageNumber: number) => {
     setPage(pageNumber);
     setLoading(true);
   };
-
+  
+  
   useEffect(() => {
     fetchData(page);
   }, [page]);
