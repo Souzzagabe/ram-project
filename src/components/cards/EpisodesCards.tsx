@@ -69,7 +69,7 @@ const EpisodesCard = () => {
                   <Card style={{ height: '100%', position: 'relative' }}>
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="div">
-                        {t('status')}: {episode.name}
+                        {t('nome')}: {episode.name}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                         {t('no ar')}: {episode.air_date}
