@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import Header from "@components/header/Header";
 import Home from "@components/pages/Home";
 import Footer from "@components/footer/Footer";
-import Table from "@components/pages/Table";
+import Table from "@/utils/Table";
 
 import { Route, Routes } from "react-router-dom";
 import CharacterCard from "@components/cards/CharacterCard";

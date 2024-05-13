@@ -1,5 +1,15 @@
 {
     "translation": {
-
-  }
-  }
+        "home": "Início",
+        "character": "Personagem",
+        "episodes": "Episódios",
+        "header": "Saiba tudo do universo de Rick and Morty",
+        "footer": "Todos os direitos reservados.",
+        "status": "Status",
+        "genero": "Gênero",
+        "raça":"raça",
+        "no ar":"No Ar",
+        "episodios":"Episódio",
+        "link":"Link"
+    }
+}

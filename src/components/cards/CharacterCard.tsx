@@ -2,10 +2,13 @@ import { useState, useEffect } from 'react';
 import { Grid, CircularProgress, Typography, Container, Card, CardContent, CardMedia } from '@mui/material';
 import { fetchCharacters } from '../services/fetchRamService';
 import { CharacterData } from '../types/types';
+import { useTranslation } from 'react-i18next';
 
 const CharacterCard = () => {
   const [characters, setCharacters] = useState<CharacterData[]>([]);
   const [loading, setLoading] = useState(true);
+  const { t } = useTranslation();
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,13 +43,13 @@ const CharacterCard = () => {
                     {character.name}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Status: {character.status}
+                  {t('status')}: {character.status}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Species: {character.species}
+                  {t('raça')}: {character.species}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Gender: {character.gender}
+                  {t('genero')}: {character.gender}
                   </Typography>
                 </CardContent>
               </Card>

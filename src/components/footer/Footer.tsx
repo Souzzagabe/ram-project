@@ -1,12 +1,14 @@
 import React from 'react';
 import { Container, Typography, AppBar } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <AppBar position="static" sx={{ backgroundColor: '#E1B15C', boxShadow: 'none', padding:'25px'}}>
       <Container maxWidth="lg">
         <Typography variant="body1" align="center" sx={{ padding: '20px' }}>
-          &copy; {new Date().getFullYear()} Rick and Morty. <a href='https://www.linkedin.com/in/gabriel-souza-web/' target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none', fontWeight: 'bold', color:'white',}}>@Souzzagabe</a> Todos os direitos reservados.
+          &copy; {new Date().getFullYear()} <a href="https://www.linkedin.com/in/gabriel-souza-web/" target='blank' style={{ color: 'inherit', textDecoration: 'none' }}>@Souzzagabe</a> {t('footer')}
         </Typography>
       </Container>
     </AppBar>

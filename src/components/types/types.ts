@@ -1,4 +1,3 @@
-// Types.ts
 export interface CharacterData {
   name: string;
   status: string;

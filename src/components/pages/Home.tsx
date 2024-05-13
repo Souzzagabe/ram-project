@@ -13,7 +13,7 @@ const StyledImageListItem = styled(ImageListItem)({
   },
   border: "1px solid white",
   '& img': {
-    objectFit: 'contain', // Alteração para 'contain'
+    objectFit: 'contain',
     width: '100%',
     height: '100%',
     maxWidth: '100%',

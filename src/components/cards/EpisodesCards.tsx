@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import { Grid, CircularProgress, Typography, Container, Card, CardContent } from '@mui/material';
 import { fetchEpisodes } from '../services/fetchRamService';
 import { EpisodeData } from '../types/types';
+import { useTranslation } from 'react-i18next';
 
 const EpisodesCard = () => {
   const [episodes, setEpisodes] = useState<EpisodeData[]>([]);
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -33,16 +35,16 @@ const EpisodesCard = () => {
               <Card style={{ height: '100%' }}>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Nome: {episode.name}
+                  {t('status')}: {episode.name}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    No Ar: {episode.air_date}
+                  {t('no ar')}: {episode.air_date}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Episódios: {episode.episode}
+                  {t('episodios')}: {episode.episode}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Link: {episode.url}
+                  {t('link')}: {episode.url}
                   </Typography>
                 </CardContent>
               </Card>

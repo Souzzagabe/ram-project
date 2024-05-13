@@ -1,22 +1,10 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { makeStyles } from "@mui/material";
-import brazilFlag from "../assets/brasil.png";
-import usaFlag from "../assets/eua.png";
-
-const useStyles = makeStyles({
-  flag: {
-    width: 40,
-    height: 40,
-    transition: "transform 0.3s",
-    "&:hover": {
-      transform: "scale(1.1)",
-    },
-  },
-});
+import { Button } from "@mui/material";
+import BrazilFlag from "../assets/brasil.png";
+import UsaFlag from "../assets/eua.png";
 
 const LanguageSwitcher = () => {
-  const classes = useStyles();
   const {
     i18n: { changeLanguage, language },
   } = useTranslation();
@@ -29,14 +17,42 @@ const LanguageSwitcher = () => {
     setLang(newLanguage);
   };
 
+  const handleMouseEnter = (e: any) => {
+    e.currentTarget.style.transform = "scale(1.1)";
+  };
+
+  const handleMouseLeave = (e: any) => {
+    e.currentTarget.style.transform = "scale(1)";
+  };
+
   return (
-    <button onClick={handleChangeLanguage}>
+    <Button onClick={handleChangeLanguage} sx={{ p: 0 }}>
       {lang === "en" ? (
-        <img src={brazilFlag} alt="Brazil Flag" className={classes.flag} />
+        <img
+          src={BrazilFlag}
+          alt="Brazil Flag"
+          style={{
+            width: "32px",
+            height: "32px",
+            transition: "transform 300ms",
+          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        />
       ) : (
-        <img src={usaFlag} alt="USA Flag" className={classes.flag} />
+        <img
+          src={UsaFlag}
+          alt="USA Flag"
+          style={{
+            width: "32px",
+            height: "32px",
+            transition: "transform 300ms",
+          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        />
       )}
-    </button>
+    </Button>
   );
 };
 

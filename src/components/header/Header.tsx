@@ -1,7 +1,9 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import bannerImage from "@/assets/banner-ramedited.jpg";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation();
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   return (
@@ -38,7 +40,7 @@ const Header = () => {
             marginBottom: "8px",
           }}
         >
-          Saiba tudo do universo de Rick and Morty
+          {t('header')}
         </Typography>
       </Box>
     </Box>
