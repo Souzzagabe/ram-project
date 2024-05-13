@@ -26,7 +26,7 @@ export const fetchEpisodes = async () => {
 
     return allEpisodes;
   } catch (error) {
-    console.error('Erro ao buscar os dados dos episódios:', error);
+    console.error("Erro ao buscar os dados dos episódios:", error);
     throw error;
   }
 };

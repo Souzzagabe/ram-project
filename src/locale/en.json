@@ -1,20 +1,16 @@
 {
-    "translation": {
-        "home":"Home",
-        "character":"Characters",
-        "episodes": "Episodes",
-        "header": "Find everything about Rick and Morty universe",
-        "footer": "All rights reserved.",
-        "status": "Status",
-        "genero": "gender",
-        "raça":"race",
-        "no ar":"On Air",
-        "episodios":"Episode",
-        "link":"Link",
-        "nome":"Name"
-
-
-
-    }
+  "translation": {
+    "home": "Home",
+    "character": "Characters",
+    "episodes": "Episodes",
+    "header": "Find everything about Rick and Morty universe",
+    "footer": "All rights reserved.",
+    "status": "Status",
+    "genero": "gender",
+    "raça": "race",
+    "no ar": "On Air",
+    "episodios": "Episode",
+    "link": "Link",
+    "nome": "Name"
   }
-  
+}

@@ -4,7 +4,7 @@ export interface CharacterData {
   species: string;
   gender: string;
   image: string;
-  id:number;
+  id: number;
 }
 
 export interface EpisodeData {
@@ -13,5 +13,11 @@ export interface EpisodeData {
   air_date: string;
   id: number;
   name: string;
-  url:string;
+  url: string;
+}
+
+export interface TabData {
+  label: string;
+  path: string;
+  component: React.ComponentType<any>;
 }

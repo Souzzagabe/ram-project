@@ -40,7 +40,7 @@ const Header = () => {
             marginBottom: "8px",
           }}
         >
-          {t('header')}
+          {t("header")}
         </Typography>
       </Box>
     </Box>

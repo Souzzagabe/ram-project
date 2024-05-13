@@ -8,7 +8,7 @@ const LanguageSwitcher = () => {
   const {
     i18n: { changeLanguage, language },
   } = useTranslation();
-  
+
   const [lang, setLang] = useState(language);
 
   const handleChangeLanguage = () => {

@@ -13,7 +13,7 @@ const StyledImageListItem = styled(ImageListItem)({
   },
   border: "1px solid white",
   "& img": {
-    objectFit: "contain", // Alteração para 'contain'
+    objectFit: "contain",
     width: "100%",
     height: "100%",
     maxWidth: "100%",
@@ -45,7 +45,7 @@ const Home = () => {
           </ImageList>
         </Grid>
       </Grid>
-      <Box paddingTop="61px">
+      <Box paddingTop="62px">
         <Footer />
       </Box>
     </Box>
