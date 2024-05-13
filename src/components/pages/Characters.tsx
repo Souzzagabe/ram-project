@@ -1,15 +1,23 @@
-import { useState, useEffect } from 'react';
-import { Grid, CircularProgress, Typography, Container, Card, CardContent, CardMedia, Box } from '@mui/material';
-import { fetchCharacters } from '../services/fetchRamService';
-import { CharacterData } from '../types/types';
-import { useTranslation } from 'react-i18next';
-import Footer from '../footer/Footer';
+import { useState, useEffect } from "react";
+import {
+  Grid,
+  CircularProgress,
+  Typography,
+  Container,
+  Card,
+  CardContent,
+  CardMedia,
+  Box,
+} from "@mui/material";
+import { fetchCharacters } from "../services/fetchRamService";
+import { CharacterData } from "../types/types";
+import { useTranslation } from "react-i18next";
+import Footer from "../footer/Footer";
 
 const CharacterCard = () => {
   const [characters, setCharacters] = useState<CharacterData[]>([]);
   const [loading, setLoading] = useState(true);
   const { t } = useTranslation();
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,15 +26,24 @@ const CharacterCard = () => {
         setCharacters(charactersData);
         setLoading(false);
       } catch (error) {
+        console.log("não carregou");
       }
     };
-  
+
     fetchData();
   }, []);
 
   return (
     <Box>
-      <Container maxWidth="lg" style={{ maxWidth: 1000, maxHeight: 555, overflowY: 'auto', marginBottom: '62px' }}>
+      <Container
+        maxWidth="lg"
+        style={{
+          maxWidth: 1000,
+          maxHeight: 555,
+          overflowY: "auto",
+          marginBottom: "62px",
+        }}
+      >
         <Box
           display="flex"
           justifyContent="center"
@@ -39,7 +56,7 @@ const CharacterCard = () => {
             <Grid container spacing={3}>
               {characters.map((character) => (
                 <Grid item xs={12} sm={6} md={4} key={character.id}>
-                  <Card style={{ height: '100%' }}>
+                  <Card style={{ height: "100%" }}>
                     <CardMedia
                       component="img"
                       height="140"
@@ -51,13 +68,13 @@ const CharacterCard = () => {
                         {character.name}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        {t('status')}: {character.status}
+                        {t("status")}: {character.status}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        {t('raça')}: {character.species}
+                        {t("raça")}: {character.species}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        {t('genero')}: {character.gender}
+                        {t("genero")}: {character.gender}
                       </Typography>
                     </CardContent>
                   </Card>
