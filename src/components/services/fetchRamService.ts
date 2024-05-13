@@ -18,8 +18,8 @@ export const fetchEpisodes = async () => {
     let nextPage = "https://rickandmortyapi.com/api/episode";
 
     while (nextPage) {
-      const response = await fetch(nextPage);
-      const data = await response.json();
+      const response = await axios.get(nextPage);
+      const data = response.data;
       allEpisodes.push(...data.results);
       nextPage = data.info.next;
     }
