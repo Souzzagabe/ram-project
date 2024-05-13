@@ -8,7 +8,7 @@ function Tabs() {
   const { t } = useTranslation();
 
   const tabs = [
-    { label: t("home"), path: "/home", component: Home },
+    { label: t("home"), path: "/", component: Home },
     { label: t("character"), path: "/personagens", component: CharacterCard },
     { label: t("episodios"), path: "/episodios", component: EpisodesCard },
   ];

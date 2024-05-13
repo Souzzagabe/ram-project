@@ -13,7 +13,7 @@ function App() {
       <Tabs />
       <Box bgcolor="#E1B15C" px={2} py={1}>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/personagens" element={<CharacterCard />} />
           <Route path="/episodios" element={<EpisodesCard />} />
         </Routes>
