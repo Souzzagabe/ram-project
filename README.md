@@ -12,6 +12,14 @@ O Rick and Morty Info é um aplicativo web que fornece informações sobre a pop
 - **Página de Personagens:** Exibe informações detalhadas sobre os personagens da série, incluindo nome, status, raça e gênero.
 - **Página de Episódios:** Mostra detalhes sobre os episódios da série, como nome, data de lançamento, número do episódio e um link para mais informações.
 
+### API utilizada
+
+- **Página inicial (Home):** Apresenta duas imagens dos protagonistas da série, Rick e Morty.
+
+- **Página de Personagens:** Exibe informações detalhadas sobre os personagens da série, incluindo nome, status, raça e gênero. (API utilizada: [Rick and Morty API](https://rickandmortyapi.com/))
+
+- **Página de Episódios:** Mostra detalhes sobre os episódios da série, como nome, data de lançamento, número do episódio e um link para mais informações. (API utilizada: [Rick and Morty API](https://rickandmortyapi.com/))
+
 ## Tecnologias Utilizadas
 
 - React
