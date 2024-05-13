@@ -1,4 +1,4 @@
-<div>
+
     <img src="caminho/para/sua/imagem.png" alt="descrição da imagem" />
     <h2>Instalação</h2>
     <ul>
@@ -49,4 +49,3 @@
 
     <h2>Licença</h2>
     <p>Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.</p>
-</div>

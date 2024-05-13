@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Tab, Tabs, Toolbar, useMediaQuery } from "@mui/material";
+import { Tab, Tabs, Toolbar, useMediaQuery, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -20,6 +20,7 @@ const Table = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        flexDirection: isMobile ? "column" : "row",
         "& .MuiTabs-root": {
           display: "flex",
           alignItems: "center",
@@ -49,31 +50,33 @@ const Table = () => {
         },
       }}
     >
-      <Tabs
-        value={activeTab}
-        onChange={handleTabChange}
-        indicatorColor="primary"
-        textColor="primary"
-      >
-        <Link
-          to="/home"
-          style={{ textDecoration: "none", color: "inherit" }}
-          onClick={() => setActiveTab(0)}
+      <Stack direction={isMobile ? "column" : "row"} spacing={1}> 
+        <Tabs
+          value={activeTab}
+          onChange={handleTabChange}
+          indicatorColor="primary"
+          textColor="primary"
         >
-          <Tab label={t('home')} />
-        </Link>
-        <Link
-          to="/personagens"
-          style={{ textDecoration: "none", color: "inherit" }}
-          onClick={() => setActiveTab(1)}
-        >
-          <Tab label={t('character')} />
-        </Link>
-        <Link to="/episodios">
-          <Tab label={t('episodes')} onClick={() => setActiveTab(2)} />
-        </Link>
-      </Tabs>
-      <LanguageSwitcher />
+          <Link
+            to="/home"
+            style={{ textDecoration: "none", color: "inherit" }}
+            onClick={() => setActiveTab(0)}
+          >
+            <Tab label={t('home')} />
+          </Link>
+          <Link
+            to="/personagens"
+            style={{ textDecoration: "none", color: "inherit" }}
+            onClick={() => setActiveTab(1)}
+          >
+            <Tab label={t('character')} />
+          </Link>
+          <Link to="/episodios">
+            <Tab label={t('episodes')} onClick={() => setActiveTab(2)} />
+          </Link>
+        </Tabs>
+        <LanguageSwitcher />
+      </Stack>
     </Toolbar>
   );
 };
