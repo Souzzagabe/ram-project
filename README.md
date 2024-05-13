@@ -1,8 +1,6 @@
-![Descrição da Imagem](components/assets/template-readme.png)
+![Descrição da Imagem](src/components/assets/template-readme.png)
 
-
-
-nstalação:
+instalação:
 
 Clone o repositório:
 git clone https://github.com/seu-usuario/rick-and-morty-info.git
