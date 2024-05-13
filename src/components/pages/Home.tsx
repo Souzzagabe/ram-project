@@ -45,7 +45,7 @@ const Home = () => {
           </ImageList>
         </Grid>
       </Grid>
-      <Box paddingTop="62px">
+      <Box paddingTop="61px">
         <Footer />
       </Box>
     </Box>
