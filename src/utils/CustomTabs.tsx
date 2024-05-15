@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Tab, Tabs, Toolbar, Stack, useMediaQuery } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
-import {TabData} from '@/components/types/types'
+import { CustomTabsProps } from "@/components/types/types";
 
-interface CustomTabsProps {
-  tabs: TabData[];
-}
-
-const CustomTabs: React.FC<CustomTabsProps> = ({ tabs }) => {
+const CustomTabs = ({ tabs }: CustomTabsProps) => {
   const [activeTab, setActiveTab] = useState(0);
   const { t } = useTranslation();
   const isMobile = useMediaQuery('(max-width:600px)');
