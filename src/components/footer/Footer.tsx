@@ -1,8 +1,7 @@
-import React from "react";
 import { Container, Typography, AppBar } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const { t } = useTranslation();
   return (
     <AppBar
