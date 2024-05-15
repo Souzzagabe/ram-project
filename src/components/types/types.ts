@@ -19,5 +19,9 @@ export interface EpisodeData {
 export interface TabData {
   label: string;
   path: string;
-  component: React.ComponentType<any>;
+  component: React.ComponentType;
+}
+
+export interface CustomTabsProps {
+  tabs: TabData[];
 }
