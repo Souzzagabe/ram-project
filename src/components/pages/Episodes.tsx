@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
 import {
   Grid,
@@ -14,6 +13,7 @@ import {
 import { EpisodeData } from "../types/types";
 import { useTranslation } from "react-i18next";
 import Footer from "../footer/Footer";
+import { fetchEpisodes } from "../services/fetchRamService";
 
 const StyledPagination = styled(Pagination)({
   "& .MuiPaginationItem-root": {
@@ -30,17 +30,6 @@ const StyledPagination = styled(Pagination)({
   justifyContent: "center", 
 });
 
-const fetchEpisodes = async (page = 1) => {
-  try {
-    const response = await axios.get(
-      `https://rickandmortyapi.com/api/episode?page=${page}`
-    );
-    return response.data?.results || [];
-  } catch (error) {
-    console.error("Erro ao buscar os dados dos episódios:", error);
-    throw error;
-  }
-};
 
 const EpisodesCard = () => {
   const [episodes, setEpisodes] = useState<EpisodeData[]>([]);

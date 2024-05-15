@@ -12,19 +12,12 @@ export async function fetchCharacters() {
   }
 }
 
-export const fetchEpisodes = async () => {
+export const fetchEpisodes = async (page = 1) => {
   try {
-    const allEpisodes = [];
-    let nextPage = "https://rickandmortyapi.com/api/episode";
-
-    while (nextPage) {
-      const response = await axios.get(nextPage);
-      const data = response.data;
-      allEpisodes.push(...data.results);
-      nextPage = data.info.next;
-    }
-
-    return allEpisodes;
+    const response = await axios.get(
+      `https://rickandmortyapi.com/api/episode?page=${page}`
+    );
+    return response.data?.results || [];
   } catch (error) {
     console.error("Erro ao buscar os dados dos episódios:", error);
     throw error;
